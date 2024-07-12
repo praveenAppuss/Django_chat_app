@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'upd' ob.id %}" method="post">
+        {% csrf_token %}
+        <label for="name">Enter the film</label>
+        <input type="text" name="name" value="{{ob.name}}"><br>
+        <label for="actor">Enter actor name</label>
+        <input type="text" name="actor" value="{{ob.actor}}"><br>
+        <label for="stroy">Enter the type of stroy</label>
+        <input type="text" name="story" value="{{ob.story}}"><br>
+        <label for="actor">Enter the release date</label>
+        <input type="text" name="redate" value="{{ob.redate}}"><br>
+        <input type="submit">
+    </form>
+</body>
+</html>

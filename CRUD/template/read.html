@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1 px solid" style="border-collapse: collapse;">
+        <tr>
+        <th>NAME</th>
+        <th>ACTOR</th>
+        <th>STORY</th>
+        <th>RELASE</th>
+        <th>ANY CHANGE</th>
+        <th>
+            CHANGE IT
+        </th>
+    </tr>
+    {% for i in objs %}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.actor}}</td>
+        <td>{{i.story}}</td>
+        <td>{{i.redate}}</td>
+        <td><button><a href="{% url 'del' i.id %}">delete me</a></button></td>
+        <td><button><a href="{% url 'upd' i.id %}">update</a></button></td>
+    </tr>
+    {% endfor %}
+     
+
+    </table>
+    
+</body>
+</html>
